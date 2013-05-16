@@ -9,17 +9,23 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 	font: inherit;
 	vertical-align: baseline; }
 
+html, body {height: 100%;}
+
 ol, ul {
 	list-style: none; }
 
 table {
 	border-collapse: collapse;
 	border-spacing: 0; }
+	
+#skip-link {display: none;}
+.element-invisible {display: none;}
 
 /* #Basic Styles
 ================================================== */
 body {	
 	font: 75%/1 "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	background:#333;
 	color: #444;
 	-webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
 	-webkit-text-size-adjust: 100%;
@@ -28,10 +34,10 @@ body {
 #page {
 	background: #fff;}
 
-#main {background: #f2f2f2 url("../img/body.jpg") no-repeat center 70% fixed; }
+#main {background: #f2f2f2 /*url("../img/body.jpg") no-repeat center 70% fixed;*/ }
 #main .container {background: #fff;min-height: 630px}
 #header {background: #dd491b;}
-#footer {background: #333;}
+#footer {background: #333; bottom: 0; width: 100%; position: relative; min-height: 120px;}
 
 
 h1, h2, h3, h4, h5, h6 {
@@ -86,7 +92,7 @@ a:hover, a:focus { color: #000; }
 	padding: 28px 0 40px;}
 	
 #navigation ul li {margin: 0 20px 0 0;}
-#navigation ul li.last {margin: 0;}
+#navigation ul li.last {margin: 0 25px 0 0;;}
 #navigation ul li a {color: #fff; font-weight: 700; font-size: 90%; text-transform: uppercase;  padding: 0 0 4px;}
 #navigation ul li a:hover, #navigation ul li a:focus, #navigation ul li a.active {color: #fff; border-bottom: 4px solid #fff;}
 
@@ -99,7 +105,7 @@ a:hover, a:focus { color: #000; }
 .view-blog-categories ul li a {background: url("../img/arrow-left.png") no-repeat left center; padding: 0 0 0 16px;}
 .block-search .form-submit, .block-search .form-submit:hover, .block-search .form-submit:focus {position: absolute; top:-1px; margin: 0;background: transparent url("../img/magnifier.png") no-repeat 0 0; color: transparent; width:30px; height: 29px; padding: 0; border: 0; font-size: 0; }
 .form-item-search-block-form .form-text {width: 186px; display: inline; margin: 0; background: #f2f2f2; border: 0;}
-.region-search {text-align: right; margin: 40px 45px 0 0; float: right;}
+.region-search {text-align: right; margin: 40px 55px 0 0; float: right;}
 .block-search {position: relative;}
 .front .region-content {margin: 38px 0 0;}
 .author {display: block;}
