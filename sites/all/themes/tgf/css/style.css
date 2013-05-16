@@ -122,11 +122,14 @@ a:hover, a:focus { color: #000; }
 /* Node
 ================================================== */
 .page-node h1 {margin: 38px 0 10px;}
+.node-page .field-items {background: url("../img/full-separator.jpg") no-repeat left bottom;}
+.node-page h1 {font-size: 3em; font-weight: normal; margin-bottom: 14px; text-transform: uppercase; width: 57%; padding: 0 0 40px; margin: 35px 0 40px; color: #333;}
+.no-sidebars .region-search {position: absolute; right: 60px; margin: 0; top: 172px }
 
 
 /* Search
 ================================================== */
-.no-sidebars .region-search {margin: 40px 60px 0 0;}
+
 .no-sidebars .region-search form {margin: 0 0 20px;}
 
 /* Pager
@@ -139,7 +142,7 @@ a:hover, a:focus { color: #000; }
 
 /* Video list
 ================================================== */
-.view-videos .video-list {margin: 0 0 40px;}
+.view-videos .video-list {margin: 40px 0 40px;}
 .view-videos .video-list li {float: left; width: 210px; min-height: 280px;margin: 0 20px 20px 0; background: #f9f9f9; border-bottom: 4px solid #d73300;}
 .view-videos .video-list li h2 {font-size: 1.4em; margin: 0 10px 7px;}
 .view-videos .video-list li p {margin: 0 10px 5px; line-height: 1.2; color: #959595;}

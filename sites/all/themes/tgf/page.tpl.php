@@ -17,8 +17,10 @@
 		?>
 		
 		<div id="main">
+			
+		
 			<div class="container">
-				<?php print render($page['search']);?>
+				<?php print render($page['search']); ?>
 				<?php
 					if ($page['sidebar_second']) {     
 				    	print '<div class="twelve columns omega">';   
@@ -37,6 +39,7 @@
 							print render($page['help']);
 							if ($action_links) {print '<ul class="action-links">'.render($action_links).'</ul>';}
 							print render($page['content']);
+							
 							
 						print '</div>';
 						
