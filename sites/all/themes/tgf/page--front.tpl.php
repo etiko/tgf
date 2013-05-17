@@ -19,14 +19,18 @@
 		
 		
 		<div id="main">
+			
 			<div class="container">
+				<?php print '<div class="main-heading"><h1>'.bb2html($title).'</h1></div>'; ?>
 				<?php print render($page['search']);?>
 				<?php     
 			    	print '<div class="twelve columns omega">';   
 						
-						if ($tabs){print '<div class="tabs">'.render($tabs).'</div>';}
+						print render($tabs);
 						print render($page['help']);
 						if ($action_links) {print '<ul class="action-links">'.render($action_links).'</ul>';}
+						 
+						//print bb_strip($head_title);
 						print render($page['content']);
 					print '</div>';
 				 

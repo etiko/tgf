@@ -85,23 +85,32 @@
 	<?php 
 		print $user_picture;
 		print render($title_prefix); 
+		if ($content['field_sub_title'][0]['#markup']){
+			print '<div class="field-item">';
+				print ($content['field_sub_title'][0]['#markup']);
+			print '</div>';
+		}
+		
   		if (!$page) {
-  			print '<h2 $title_attributes;><a href="$node_url;" $title;></a></h2>';
+  			//print '<h2 $title_attributes;><a href="$node_url;" $title;></a></h2>';
+  			print '<h2><a href="$node_url;">'.$title.'</a></h2>';
   		}
+  		
   		print render($title_suffix);
+  		
   		if ($display_submitted) {
-  			print '<span class="author">By <span class="color-red">'.$name.'</span></span>';
+  			print '<h2>'.$title.'</h2>';
+			print '<span class="author">By <span class="color-red">'.$name.'</span></span>';
+  			
   			print 
   				'<div class="padding20b">
   					<span class="date">'.$date.'</span>'.    
           			'<span class="comment_count">'.$comment_count.' comment(s)</span>
-          		</div>';  				
+          		</div>'; 				
   		}
-  		
-  		
-  		
+  		  		
   		print '<div class="content">';		
-			// We hide the comments and links now so that we can render them later.
+			hide($content['field_sub_title']);
 			hide($content['comments']);
 			hide($content['links']);
 			print render($content);    	

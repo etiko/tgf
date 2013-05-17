@@ -17,3 +17,41 @@ function tgf_css_alter(&$css){
 		unset($css[drupal_get_path('file','css').'sites/all/modules/ckeditor/ckeditor.css']);		
 	}
 }
+
+
+
+
+function bb2html($text) {
+	$bbcode = array(
+			"[span]", "[/span]",
+			"[strong]", "[/strong]",
+			"[b]", "[/b]",
+			"[u]", "[/u]",
+			"[i]", "[/i]",
+			"[em]", "[/em]",
+			"[amp]", "[theta]", "[degree]", "[prime]", "[doubleprime]", "[squareroot]"
+	);
+	$htmlcode = array(
+			"<span>", "</span>",
+			"<strong>", "</strong>",
+			"<strong>", "</strong>",
+			"<u>", "</u>",
+			"<em>", "</em>",
+			"<em>", "</em>",
+			"&amp;", "&theta;", "&#176;", "&prime;", "&Prime;", "&radic;"
+	);
+	return str_replace($bbcode, $htmlcode, $text);
+}
+
+function bb_strip($text) {
+	$bbcode = array(
+			"[span]", "[/span]",
+			"[strong]", "[/strong]",
+			"[b]", "[/b]",
+			"[u]", "[/u]",
+			"[i]", "[/i]",
+			"[em]", "[/em]",
+			"&amp;", "&theta;", "&#176;", "&prime;", "&Prime;", "&radic;"
+	);
+	return str_replace($bbcode, '', $text);
+}

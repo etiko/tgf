@@ -2,7 +2,9 @@
 		<?php
 			print '<div id="header">';
 				print '<div class="container">';
-				if ($logo) {print '<a href="'.$front_page.'" title="Home" id="logo"><img src="'.$logo.'" alt="Home" /></a>';}
+				if ($logo) {
+						print '<a href="'.$front_page.'" title="Home" id="logo"><img src="'.$logo.'" alt="Home" /></a>';
+				}
 				print render($page['header']); 
 				if ($main_menu || $secondary_menu){					
 					print '<div id="navigation">'.
@@ -17,39 +19,48 @@
 		?>
 		
 		<div id="main">
-			
-		
 			<div class="container">
 				<?php print render($page['search']); ?>
 				<?php
 					if ($page['sidebar_second']) {     
-				    	print '<div class="twelve columns omega">';   
-							if ($tabs){print '<div class="tabs">'.render($tabs).'</div>';}	
-				    		if ($title) {print '<h1>'.$title.'</h1>';}							
+				    	print '<div class="twelve columns omega">';		
+				    				    	
+							print render($tabs);	
 							print render($page['help']);
-							if ($action_links) {print '<ul class="action-links">'.render($action_links).'</ul>';}
+							if ($action_links) {
+								print '<ul class="action-links">'.render($action_links).'</ul>';
+							}
+							//print '<h2>'.$title.'</h2>';
 							print render($page['content']);
 						print '</div>';
-						print '<div class="sidebar four columns omega">'.render($page['sidebar_second']).'</div>';	
+						
+						print '<div class="sidebar four columns omega">';
+							print render($page['sidebar_second']);
+						print '</div>';	
+						
 					}
 					else {
 						print '<div class="sixteen columns omega">';   
-							/*if ($title) {print '<h1>'.$title.'</h1>';}*/
-							if ($tabs){print '<div class="tabs">'.render($tabs).'</div>';}
+							print render($tabs);
 							print render($page['help']);
-							if ($action_links) {print '<ul class="action-links">'.render($action_links).'</ul>';}
+							if ($action_links) {
+								print '<ul class="action-links">';
+									print render($action_links);
+								print '</ul>';
+							}
 							print render($page['content']);
-							
 							
 						print '</div>';
 						
 					}
-				?> 
-			</div>     
+				?>
+			</div>			  
 		</div>
-		<div class="clearfix"></div>
+	
 		
-	   	<div id="footer">
+		<div id="footer">
 			<?php print render($page['footer']); ?>
 		</div>
+	   
+		
 	</div>
