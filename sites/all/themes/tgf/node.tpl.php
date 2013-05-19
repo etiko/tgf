@@ -85,7 +85,7 @@
 	<?php 
 		print $user_picture;
 		print render($title_prefix); 
-		if ($content['field_sub_title'][0]['#markup']){
+		if (isset ($content['field_sub_title'])){
 			print '<div class="field-item">';
 				print ($content['field_sub_title'][0]['#markup']);
 			print '</div>';
@@ -93,7 +93,7 @@
 		
   		if (!$page) {
   			//print '<h2 $title_attributes;><a href="$node_url;" $title;></a></h2>';
-  			print '<h2><a href="$node_url;">'.$title.'</a></h2>';
+  			//print '<h2><a href="$node_url;">'.$title.'</a></h2>';
   		}
   		
   		print render($title_suffix);
