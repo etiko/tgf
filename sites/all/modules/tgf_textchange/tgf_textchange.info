@@ -1,0 +1,5 @@
+name = TGF Text change
+package = tgf
+description = Change occurence of -any- to all
+
+core = 7.x

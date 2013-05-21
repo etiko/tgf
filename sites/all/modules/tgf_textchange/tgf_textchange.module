@@ -1,0 +1,11 @@
+<?php
+
+function tgf_textchange_form_alter(&$form, $form_state, $form_id) {
+	$content_type = array('trends', 'videos', 'photos');	
+	if ($form_id == 'views_exposed_form') {			
+		if (in_array($form_state['view']->name, $content_type)){			
+			$form['field_video_category_tid']['#options']['All'] = t('All');
+			$form['field_trends_category_tid']['#options']['All'] = t('All');
+		}
+	}	
+}
