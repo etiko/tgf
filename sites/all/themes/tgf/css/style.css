@@ -83,12 +83,18 @@ ol ol li, ol ul li { margin-bottom: 6px; }
 ul.large li { line-height: 21px; }
 li p { line-height: 21px; }
 
+/* View filters
+================================================== */
+.view-filters {position: absolute; top: 176px;}
+.form-type-bef-link {float: left; margin: 0 10px 0 0;}
+.form-type-bef-link.selected a {color: #d73300}
+.views-exposed-widget.views-submit-button {display: none;}
+
 /* #Links
 ================================================== */
 a { color: #656565; text-decoration: none; outline: 0; }
 a:hover, a:focus { color: #000; }
-.color-red {color: #d73300;}
-	
+.color-red {color: #d73300;}	
 
 #navigation {float: right;padding: 28px 0 40px;}	
 #navigation ul li {margin: 0 20px 0 0;}

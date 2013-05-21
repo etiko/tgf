@@ -14,11 +14,9 @@ function tgf_css_alter(&$css){
 		unset($css[drupal_get_path('file','css').'modules/search/search.css']);
 		unset($css[drupal_get_path('file','css').'sites/all/modules/views/css/views.css']);
 		unset($css[drupal_get_path('file','css').'sites/all/modules/ctools/css/ctools.css']);
-		unset($css[drupal_get_path('file','css').'sites/all/modules/ckeditor/ckeditor.css']);		
+		unset($css[drupal_get_path('file','css').'sites/all/modules/ckeditor/ckeditor.css']);
 	}
 }
-
-
 
 
 function bb2html($text) {

@@ -8,8 +8,10 @@ stylesheets[all][] = css/base.css
 stylesheets[all][] = css/skeleton.css
 stylesheets[all][] = css/layout.css
 
-scripts[] = js/jquery.tgf.js
 scripts[] = js/jquery.init.js
+scripts[] = js/jquery.tgf.js
+scripts[] = js/jquery.uniform.min.js
+
 
 regions[header] = Header
 regions[sub_header] = Sub header 
