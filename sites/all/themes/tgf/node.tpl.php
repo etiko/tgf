@@ -98,18 +98,22 @@
   		
   		print render($title_suffix);
   		
-  		if ($display_submitted) {
-  			print '<h2>'.$title.'</h2>';
-			print '<span class="author">By <span class="color-red">'.$name.'</span></span>';
-  			
-  			print 
-  				'<div class="padding20b">
-  					<span class="date">'.$date.'</span>'.    
-          			'<span class="comment_count">'.$comment_count.' comment(s)</span>
-          		</div>'; 				
+  		if ($node->type == 'webform'){
+  			hide($title);  			
   		}
-  		  		
-  		print '<div class="content">';		
+  		else {
+	  		if ($display_submitted) {
+	  			print '<h2>'.$title.'</h2>';
+				print '<span class="author">By <span class="color-red">'.$name.'</span></span>';	  			
+	  			print 
+	  				'<div class="padding20b">
+	  					<span class="date">'.$date.'</span>'.    
+	          			'<span class="comment_count">'.$comment_count.' comment(s)</span>
+	          		</div>'; 				
+	  		}	
+  		}
+  		
+  		print '<div class="content">';  				
 			hide($content['field_sub_title']);
 			hide($content['comments']);
 			hide($content['links']);

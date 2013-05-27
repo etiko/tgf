@@ -5,6 +5,7 @@ function tgf_css_alter(&$css){
 
 	if($user->uid == 0){
 		unset($css[drupal_get_path('file','css').'modules/system/system.messages.css']);
+		
 		unset($css[drupal_get_path('file','css').'modules/system/system.base.css']);
 		unset($css[drupal_get_path('file','css').'modules/system/system.theme.css']);
 		unset($css[drupal_get_path('file','css').'modules/comment/comment.css']);
@@ -15,6 +16,7 @@ function tgf_css_alter(&$css){
 		unset($css[drupal_get_path('file','css').'sites/all/modules/views/css/views.css']);
 		unset($css[drupal_get_path('file','css').'sites/all/modules/ctools/css/ctools.css']);
 		unset($css[drupal_get_path('file','css').'sites/all/modules/ckeditor/ckeditor.css']);
+		unset($css[drupal_get_path('file','css').'sites/all/modules/webform/css/webform.css']);
 	}
 }
 

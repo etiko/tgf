@@ -6,7 +6,7 @@
 		<?php 
 			print $head; 
 			print '<title>'.$head_title.'</title>';
-			print '<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">';
+			//print '<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">';
 			print $styles;
 			 
 		?>
